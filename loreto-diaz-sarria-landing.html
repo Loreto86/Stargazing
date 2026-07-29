@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loreto Díaz Sarria | Consultora en Formulación Estratégica de Proyectos Concursables</title>
+<meta name="description" content="Consultoría estratégica en formulación de proyectos para fondos públicos de financiamiento empresarial: CORFO, SERCOTEC, fondos regionales y de innovación. Acompañamiento profesional de principio a fin.">
+<meta name="keywords" content="formulación de proyectos, CORFO, SERCOTEC, fondos concursables, consultora, financiamiento empresarial, Chile">
+<meta name="author" content="Loreto Díaz Sarria">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Loreto Díaz Sarria | Consultora en Formulación Estratégica de Proyectos Concursables">
+<meta property="og:description" content="Transformo ideas de negocio en proyectos sólidos, estratégicos y técnicamente bien estructurados para acceder a programas públicos de financiamiento.">
+<meta property="og:locale" content="es_CL">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --petroleo: #1F4E5F;
+    --petroleo-oscuro: #163944;
+    --salvia: #6C8A73;
+    --salvia-suave: #8AA491;
+    --arena: #F5F1E8;
+    --arena-tenue: #FAF8F3;
+    --carbon: #2F3437;
+    --blanco: #FFFFFF;
+    --linea: #E4E0D4;
+    --sombra: 0 20px 50px -25px rgba(31,78,95,0.25);
+    --radio: 14px;
+  }
+
+  *{ margin:0; padding:0; box-sizing:border-box; }
+
+  html{ scroll-behavior:smooth; }
+
+  body{
+    font-family:'Inter', sans-serif;
+    color:var(--carbon);
+    background:var(--blanco);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3,h4,.brand{
+    font-family:'Manrope', sans-serif;
+    color:var(--petroleo-oscuro);
+    line-height:1.2;
+  }
+
+  a{ color:inherit; text-decoration:none; }
+  ul{ list-style:none; }
+  img,svg{ display:block; max-width:100%; }
+
+  .contenedor{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  section{ padding:120px 0; }
+
+  .eyebrow{
+    font-family:'Manrope', sans-serif;
+    font-size:0.78rem;
+    font-weight:700;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--salvia);
+    display:inline-block;
+    margin-bottom:18px;
+  }
+
+  .titulo-seccion{
+    font-size:clamp(1.7rem, 3vw, 2.4rem);
+    font-weight:800;
+    max-width:680px;
+    margin-bottom:20px;
+    letter-spacing:-0.01em;
+  }
+
+  .intro-seccion{
+    max-width:640px;
+    color:#54595c;
+    font-size:1.05rem;
+    margin-bottom:56px;
+  }
+
+  .boton{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:15px 30px;
+    border-radius:999px;
+    font-family:'Manrope', sans-serif;
+    font-weight:700;
+    font-size:0.95rem;
+    transition:all 0.25s ease;
+    border:1.5px solid transparent;
+    cursor:pointer;
+  }
+
+  .boton-primario{
+    background:var(--petroleo);
+    color:var(--blanco);
+  }
+  .boton-primario:hover{
+    background:var(--salvia);
+    transform:translateY(-2px);
+    box-shadow:0 12px 24px -10px rgba(108,138,115,0.5);
+  }
+
+  .boton-secundario{
+    background:transparent;
+    border-color:var(--petroleo);
+    color:var(--petroleo);
+  }
+  .boton-secundario:hover{
+    background:var(--petroleo);
+    color:var(--blanco);
+  }
+
+  /* ===== HEADER ===== */
+  header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(255,255,255,0.9);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--linea);
+  }
+  .nav-wrap{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px 32px;
+    max-width:1180px;
+    margin:0 auto;
+  }
+  .brand{
+    font-size:1.15rem;
+    font-weight:800;
+    letter-spacing:-0.01em;
+  }
+  .brand span{ color:var(--salvia); }
+  nav ul{ display:flex; gap:36px; }
+  nav a{
+    font-size:0.92rem;
+    font-weight:500;
+    color:var(--carbon);
+    position:relative;
+  }
+  nav a:hover{ color:var(--petroleo); }
+  .nav-cta{ display:flex; align-items:center; gap:24px; }
+  .menu-toggle{ display:none; }
+
+  /* ===== HERO ===== */
+  .hero{
+    padding:110px 0 100px;
+    background:linear-gradient(180deg, var(--arena-tenue) 0%, var(--blanco) 100%);
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:60px;
+    align-items:center;
+  }
+  .hero-eyebrow{
+    font-family:'Manrope';
+    font-size:0.8rem;
+    font-weight:700;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--salvia);
+    margin-bottom:22px;
+  }
+  .hero h1{
+    font-size:clamp(2.1rem, 4vw, 3.1rem);
+    font-weight:800;
+    letter-spacing:-0.02em;
+    margin-bottom:22px;
+  }
+  .hero p.subtitulo{
+    font-size:1.12rem;
+    color:#4b5154;
+    max-width:520px;
+    margin-bottom:38px;
+  }
+  .hero-botones{ display:flex; gap:16px; flex-wrap:wrap; margin-bottom:44px; }
+  .hero-firma{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    font-size:0.9rem;
+    color:#6b7174;
+  }
+  .hero-firma .linea{ width:38px; height:1px; background:var(--linea); }
+
+  .hero-visual{ position:relative; }
+  .hero-visual svg{ width:100%; height:auto; }
+
+  /* ===== POR QUÉ ESTRATEGIA ===== */
+  .por-que{ background:var(--blanco); }
+  .grid-conceptos{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:1px;
+    background:var(--linea);
+    border:1px solid var(--linea);
+    border-radius:var(--radio);
+    overflow:hidden;
+  }
+  .concepto{
+    background:var(--blanco);
+    padding:34px 28px;
+    transition:background 0.25s ease;
+  }
+  .concepto:hover{ background:var(--arena-tenue); }
+  .concepto .icono{ margin-bottom:16px; }
+  .concepto h4{
+    font-size:1rem;
+    font-weight:700;
+    margin-bottom:8px;
+  }
+  .concepto p{ font-size:0.88rem; color:#63696c; }
+
+  /* ===== SERVICIO 1: ETAPAS ===== */
+  .servicio1{ background:var(--arena-tenue); }
+  .etapas{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:28px;
+  }
+  .etapa{
+    background:var(--blanco);
+    border:1px solid var(--linea);
+    border-radius:var(--radio);
+    padding:34px 30px;
+    position:relative;
+    box-shadow:var(--sombra);
+  }
+  .etapa .num{
+    font-family:'Manrope';
+    font-size:0.8rem;
+    font-weight:800;
+    color:var(--salvia);
+    letter-spacing:0.05em;
+    margin-bottom:18px;
+    display:block;
+  }
+  .etapa .icono{ margin-bottom:16px; }
+  .etapa h4{ font-size:1.05rem; font-weight:700; margin-bottom:10px; }
+  .etapa p{ font-size:0.9rem; color:#5c6265; }
+
+  /* ===== SERVICIO 2 ===== */
+  .servicio2{ background:var(--blanco); }
+  .servicio2-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:64px;
+    align-items:start;
+  }
+  .servicio2 .lista-incluye li{
+    display:flex;
+    gap:14px;
+    padding:16px 0;
+    border-bottom:1px solid var(--linea);
+    font-size:0.98rem;
+  }
+  .servicio2 .lista-incluye li:last-child{ border-bottom:none; }
+  .servicio2 .lista-incluye .marca{
+    color:var(--salvia);
+    font-weight:700;
+    flex-shrink:0;
+  }
+  .nota-legal{
+    margin-top:32px;
+    font-size:0.84rem;
+    color:#7a807f;
+    padding:18px 22px;
+    background:var(--arena-tenue);
+    border-left:3px solid var(--salvia);
+    border-radius:6px;
+  }
+
+  /* ===== DIFERENCIADORES ===== */
+  .diferenciadores{ background:var(--petroleo-oscuro); color:var(--arena); }
+  .diferenciadores .eyebrow{ color:var(--salvia-suave); }
+  .diferenciadores .titulo-seccion, .diferenciadores .intro-seccion{ color:var(--arena); }
+  .diferenciadores .intro-seccion{ color:#c7d3d0; }
+  .grid-diferenciadores{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:20px;
+  }
+  .dif-card{
+    background:rgba(245,241,232,0.06);
+    border:1px solid rgba(245,241,232,0.15);
+    border-radius:var(--radio);
+    padding:28px 24px;
+    transition:all 0.25s ease;
+  }
+  .dif-card:hover{
+    background:rgba(108,138,115,0.18);
+    border-color:var(--salvia-suave);
+    transform:translateY(-3px);
+  }
+  .dif-card .check{
+    color:var(--salvia-suave);
+    font-size:1.1rem;
+    margin-bottom:14px;
+    display:block;
+  }
+  .dif-card p{ font-size:0.94rem; font-weight:500; }
+
+  /* ===== PRECIOS ===== */
+  .precios{ background:var(--arena-tenue); }
+  .tabla-precios{
+    background:var(--blanco);
+    border:1px solid var(--linea);
+    border-radius:var(--radio);
+    overflow:hidden;
+    box-shadow:var(--sombra);
+  }
+  .fila-precio{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:20px;
+    align-items:center;
+    padding:30px 36px;
+    border-bottom:1px solid var(--linea);
+  }
+  .fila-precio:last-child{ border-bottom:none; }
+  .fila-precio h4{ font-size:1.05rem; font-weight:700; margin-bottom:4px; }
+  .fila-precio .desc{ font-size:0.87rem; color:#70767a; }
+  .fila-precio .valor{
+    font-family:'Manrope';
+    font-weight:800;
+    font-size:1.15rem;
+    color:var(--petroleo);
+    white-space:nowrap;
+  }
+  .nota-precios{
+    font-size:0.85rem;
+    color:#7a807f;
+    margin-top:24px;
+    max-width:640px;
+  }
+
+  /* ===== FAQ ===== */
+  .faq{ background:var(--blanco); }
+  .faq-lista{ max-width:760px; }
+  details{
+    border-bottom:1px solid var(--linea);
+    padding:24px 0;
+  }
+  details:first-child{ border-top:1px solid var(--linea); }
+  summary{
+    font-family:'Manrope';
+    font-weight:700;
+    font-size:1.02rem;
+    cursor:pointer;
+    list-style:none;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+  }
+  summary::-webkit-details-marker{ display:none; }
+  summary .signo{
+    font-size:1.3rem;
+    color:var(--salvia);
+    flex-shrink:0;
+    transition:transform 0.25s ease;
+    font-weight:500;
+  }
+  details[open] summary .signo{ transform:rotate(45deg); }
+  details p{
+    margin-top:16px;
+    color:#54595c;
+    font-size:0.96rem;
+    max-width:660px;
+  }
+
+  /* ===== CTA FINAL ===== */
+  .cta-final{
+    background:var(--petroleo);
+    color:var(--blanco);
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .cta-final .contenedor{ position:relative; z-index:2; max-width:620px; }
+  .cta-final h2{
+    color:var(--blanco);
+    font-size:clamp(1.6rem, 3vw, 2.2rem);
+    font-weight:800;
+    margin-bottom:20px;
+  }
+  .cta-final p{
+    color:#cfe0d9;
+    font-size:1.02rem;
+    margin-bottom:40px;
+  }
+  .cta-final .boton-primario{ background:var(--salvia); }
+  .cta-final .boton-primario:hover{ background:var(--arena); color:var(--petroleo-oscuro); }
+
+  /* ===== FOOTER ===== */
+  footer{
+    background:var(--petroleo-oscuro);
+    color:#a9bcb8;
+    padding:60px 0 34px;
+  }
+  .footer-grid{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:32px;
+    padding-bottom:36px;
+    border-bottom:1px solid rgba(245,241,232,0.12);
+  }
+  .footer-brand .brand{ color:var(--arena); }
+  .footer-brand .brand span{ color:var(--salvia-suave); }
+  .footer-brand p{ font-size:0.9rem; margin-top:8px; color:#8fa39d; }
+  .footer-contacto{ display:flex; flex-direction:column; gap:8px; font-size:0.92rem; }
+  .footer-contacto a:hover{ color:var(--arena); }
+  .footer-legal{
+    padding-top:26px;
+    font-size:0.78rem;
+    color:#7c908a;
+    max-width:800px;
+  }
+  .footer-copy{
+    margin-top:18px;
+    font-size:0.78rem;
+    color:#647873;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 900px){
+    section{ padding:80px 0; }
+    .hero{ padding:70px 0 60px; }
+    .hero-grid{ grid-template-columns:1fr; gap:44px; }
+    .hero-visual{ order:-1; max-width:320px; margin:0 auto; }
+    .grid-conceptos{ grid-template-columns:repeat(2, 1fr); }
+    .etapas{ grid-template-columns:1fr 1fr; }
+    .servicio2-grid{ grid-template-columns:1fr; gap:40px; }
+    .grid-diferenciadores{ grid-template-columns:repeat(2, 1fr); }
+    nav{ display:none; }
+  }
+
+  @media (max-width: 560px){
+    .contenedor{ padding:0 22px; }
+    .grid-conceptos{ grid-template-columns:1fr; }
+    .etapas{ grid-template-columns:1fr; }
+    .grid-diferenciadores{ grid-template-columns:1fr; }
+    .fila-precio{ grid-template-columns:1fr; gap:10px; }
+    .fila-precio .valor{ font-size:1.05rem; }
+    .nav-wrap{ padding:16px 22px; }
+    .nav-cta .boton span.texto-larga{ display:none; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ transition:none !important; animation:none !important; }
+  }
+
+  :focus-visible{
+    outline:2px solid var(--salvia);
+    outline-offset:3px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <a href="#inicio" class="brand">Loreto Díaz <span>Sarria</span></a>
+    <nav>
+      <ul>
+        <li><a href="#estrategia">Enfoque</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#precios">Valores</a></li>
+        <li><a href="#faq">Preguntas</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a class="boton boton-primario" href="https://wa.me/56920446659?text=Hola%20Loreto%2C%20quisiera%20agendar%20una%20reuni%C3%B3n%20para%20conversar%20sobre%20un%20proyecto." target="_blank" rel="noopener">Solicitar reunión</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="contenedor hero-grid">
+      <div>
+        <span class="hero-eyebrow">Formulación de proyectos concursables</span>
+        <h1>Loreto Díaz Sarria</h1>
+        <h2 style="font-size:1.15rem; font-weight:500; color:var(--salvia); margin-bottom:26px; font-family:'Inter';">Consultora en Formulación Estratégica de Proyectos Concursables</h2>
+        <p class="subtitulo">Transformo ideas de negocio en proyectos sólidos, estratégicos y técnicamente bien estructurados para acceder a programas públicos de financiamiento.</p>
+        <div class="hero-botones">
+          <a class="boton boton-primario" href="https://wa.me/56920446659?text=Hola%20Loreto%2C%20quisiera%20agendar%20una%20reuni%C3%B3n%20para%20conversar%20sobre%20un%20proyecto." target="_blank" rel="noopener">Solicitar una reunión</a>
+          <a class="boton boton-secundario" href="#servicios">Conocer los servicios</a>
+        </div>
+        <div class="hero-firma">
+          <span class="linea"></span>
+          <span>CORFO · SERCOTEC · Fondos regionales · Fondos de innovación</span>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="210" cy="210" r="180" stroke="#1F4E5F" stroke-opacity="0.12" stroke-width="1"/>
+          <circle cx="210" cy="210" r="130" stroke="#1F4E5F" stroke-opacity="0.18" stroke-width="1"/>
+          <path d="M70 300 L140 220 L200 260 L260 150 L350 90" stroke="#6C8A73" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="70" cy="300" r="6" fill="#1F4E5F"/>
+          <circle cx="140" cy="220" r="6" fill="#1F4E5F"/>
+          <circle cx="200" cy="260" r="6" fill="#6C8A73"/>
+          <circle cx="260" cy="150" r="6" fill="#1F4E5F"/>
+          <circle cx="350" cy="90" r="9" fill="#6C8A73"/>
+          <line x1="30" y1="340" x2="390" y2="340" stroke="#1F4E5F" stroke-opacity="0.15" stroke-width="1"/>
+          <line x1="30" y1="340" x2="30" y2="60" stroke="#1F4E5F" stroke-opacity="0.15" stroke-width="1"/>
+          <path d="M20 60 L30 45 L40 60" stroke="#1F4E5F" stroke-opacity="0.3" stroke-width="1" fill="none"/>
+          <rect x="330" y="70" width="40" height="40" rx="8" stroke="#6C8A73" stroke-width="1.5" transform="rotate(12 350 90)"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- POR QUÉ ESTRATEGIA -->
+  <section class="por-que" id="estrategia">
+    <div class="contenedor">
+      <span class="eyebrow">Enfoque</span>
+      <h2 class="titulo-seccion">¿Por qué una postulación requiere estrategia?</h2>
+      <p class="intro-seccion">Formular un proyecto exitoso implica mucho más que completar un formulario. Requiere comprender el negocio en profundidad, interpretar correctamente las bases del programa y construir una propuesta coherente entre lo técnico, lo financiero y lo comunicacional.</p>
+
+      <div class="grid-conceptos">
+        <div class="concepto">
+          <svg class="icono" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F4E5F" stroke-width="1.6"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
+          <h4>Comprensión del negocio</h4>
+          <p>Analizar el modelo de negocio antes de escribir una sola línea del proyecto.</p>
+        </div>
+        <div class="concepto">
+          <svg class="icono" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F4E5F" stroke-width="1.6"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+          <h4>Análisis de las bases</h4>
+          <p>Cada convocatoria tiene reglas propias: leerlas con rigor evita errores costosos.</p>
+        </div>
+        <div class="concepto">
+          <svg class="icono" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F4E5F" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          <h4>Coherencia técnica</h4>
+          <p>Que objetivos, actividades y presupuesto cuenten la misma historia.</p>
+        </div>
+        <div class="concepto">
+          <svg class="icono" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F4E5F" stroke-width="1.6"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>
+          <h4>Planificación financiera</h4>
+          <p>Presupuestos realistas y proyecciones que sostengan la propuesta.</p>
+        </div>
+        <div class="concepto">
+          <svg class="icono" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F4E5F" stroke-width="1.6"><path d="M4 20V10M12 20V4M20 20v-7"/></svg>
+          <h4>Proyecciones</h4>
+          <p>Estimar resultados e impacto de forma fundamentada, no arbitraria.</p>
+        </div>
+        <div class="concepto">
+          <svg class="icono" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F4E5F" stroke-width="1.6"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+          <h4>Criterios de evaluación</h4>
+          <p>Escribir pensando en cómo el evaluador leerá y calificará cada punto.</p>
+        </div>
+        <div class="concepto">
+          <svg class="icono" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F4E5F" stroke-width="1.6"><path d="M4 4h13l3 3v13H4z"/><path d="M8 9h9M8 13h9M8 17h5"/></svg>
+          <h4>Comunicación estratégica</h4>
+          <p>Redacción clara, precisa y persuasiva sin perder rigor técnico.</p>
+        </div>
+        <div class="concepto">
+          <svg class="icono" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F4E5F" stroke-width="1.6"><path d="M12 3v18M5 8l7-5 7 5M5 8v9l7 5 7-5V8"/></svg>
+          <h4>Preparación y ejecución</h4>
+          <p>Dejar el proyecto listo para presentarlo y para ejecutarlo si es adjudicado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIO 1 -->
+  <section class="servicio1" id="servicios">
+    <div class="contenedor">
+      <span class="eyebrow">Servicio 01</span>
+      <h2 class="titulo-seccion">Formulación Estratégica de Proyectos Concursables</h2>
+      <p class="intro-seccion">Un proceso metódico que convierte una idea de negocio en un proyecto técnicamente sólido, coherente con los criterios de evaluación de la institución convocante.</p>
+
+      <div class="etapas">
+        <div class="etapa">
+          <span class="num">Etapa 01</span>
+          <svg class="icono" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1F4E5F" stroke-width="1.6"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h5"/></svg>
+          <h4>Análisis de la convocatoria</h4>
+          <p>Revisión detallada de bases, requisitos, plazos y criterios de evaluación del fondo.</p>
+        </div>
+        <div class="etapa">
+          <span class="num">Etapa 02</span>
+          <svg class="icono" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1F4E5F" stroke-width="1.6"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-4 3-6 7-6s7 2 7 6"/></svg>
+          <h4>Diagnóstico del emprendimiento</h4>
+          <p>Comprensión del negocio, su etapa de desarrollo y su capacidad real de ejecución.</p>
+        </div>
+        <div class="etapa">
+          <span class="num">Etapa 03</span>
+          <svg class="icono" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1F4E5F" stroke-width="1.6"><path d="M4 17l5-9 4 5 3-4 4 8"/></svg>
+          <h4>Diseño estratégico del proyecto</h4>
+          <p>Definición de objetivos, actividades y estructura que responda a las bases.</p>
+        </div>
+        <div class="etapa">
+          <span class="num">Etapa 04</span>
+          <svg class="icono" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1F4E5F" stroke-width="1.6"><path d="M6 3h9l3 3v15H6z"/><path d="M9 8h7M9 12h7M9 16h4"/></svg>
+          <h4>Formulación completa</h4>
+          <p>Redacción técnica del proyecto: presupuesto, cronograma y contenidos exigidos.</p>
+        </div>
+        <div class="etapa">
+          <span class="num">Etapa 05</span>
+          <svg class="icono" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1F4E5F" stroke-width="1.6"><path d="M3 11l18-7-7 18-3-8-8-3z"/></svg>
+          <h4>Preparación del pitch</h4>
+          <p>Estructuración de la presentación oral o escrita ante el comité evaluador.</p>
+        </div>
+        <div class="etapa">
+          <span class="num">Etapa 06</span>
+          <svg class="icono" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1F4E5F" stroke-width="1.6"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+          <h4>Revisión y envío</h4>
+          <p>Control de calidad final y presentación formal dentro de los plazos establecidos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIO 2 -->
+  <section class="servicio2">
+    <div class="contenedor servicio2-grid">
+      <div>
+        <span class="eyebrow">Servicio 02</span>
+        <h2 class="titulo-seccion" style="margin-bottom:16px;">Acompañamiento a la Ejecución del Proyecto</h2>
+        <p style="color:#54595c; font-size:1.02rem; max-width:480px;">La adjudicación no es el final del proceso: es el inicio de una nueva etapa administrativa. Este servicio ofrece acompañamiento técnico para reducir errores, cumplir plazos y facilitar una ejecución correcta y ordenada.</p>
+
+        <div class="nota-legal">
+          La responsabilidad final de la ejecución del proyecto corresponde siempre al beneficiario adjudicado. Este servicio consiste en acompañamiento y orientación técnica.
+        </div>
+      </div>
+
+      <div>
+        <ul class="lista-incluye">
+          <li><span class="marca">—</span> Revisión del plan de compras</li>
+          <li><span class="marca">—</span> Actualización de cotizaciones</li>
+          <li><span class="marca">—</span> Revisión documental</li>
+          <li><span class="marca">—</span> Seguimiento de plazos</li>
+          <li><span class="marca">—</span> Apoyo administrativo</li>
+          <li><span class="marca">—</span> Coordinación con ejecutivos, cuando corresponda</li>
+          <li><span class="marca">—</span> Orientación durante toda la ejecución</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIADORES -->
+  <section class="diferenciadores">
+    <div class="contenedor">
+      <span class="eyebrow">Diferenciadores</span>
+      <h2 class="titulo-seccion">Un acompañamiento distinto</h2>
+      <p class="intro-seccion">Rigor técnico y cercanía real, en cada etapa del proceso.</p>
+
+      <div class="grid-diferenciadores">
+        <div class="dif-card"><span class="check">✓</span><p>Análisis estratégico</p></div>
+        <div class="dif-card"><span class="check">✓</span><p>Redacción profesional</p></div>
+        <div class="dif-card"><span class="check">✓</span><p>Acompañamiento personalizado</p></div>
+        <div class="dif-card"><span class="check">✓</span><p>Experiencia en programas públicos</p></div>
+        <div class="dif-card"><span class="check">✓</span><p>Visión empresarial</p></div>
+        <div class="dif-card"><span class="check">✓</span><p>Comunicación permanente</p></div>
+        <div class="dif-card"><span class="check">✓</span><p>Enfoque práctico</p></div>
+        <div class="dif-card"><span class="check">✓</span><p>Organización documental</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRECIOS -->
+  <section class="precios" id="precios">
+    <div class="contenedor">
+      <span class="eyebrow">Valores</span>
+      <h2 class="titulo-seccion">Inversión</h2>
+      <p class="intro-seccion">Valores de referencia. El costo definitivo se ajusta según la complejidad del programa.</p>
+
+      <div class="tabla-precios">
+        <div class="fila-precio">
+          <div>
+            <h4>Formulación Estratégica de Proyectos</h4>
+            <p class="desc">Análisis, diagnóstico, redacción y preparación completa de la postulación.</p>
+          </div>
+          <div class="valor">Desde CLP 250.000</div>
+        </div>
+        <div class="fila-precio">
+          <div>
+            <h4>Acompañamiento a la Ejecución</h4>
+            <p class="desc">Orientación administrativa y técnica durante la etapa de ejecución.</p>
+          </div>
+          <div class="valor">Desde CLP 180.000</div>
+        </div>
+        <div class="fila-precio">
+          <div>
+            <h4>Formulación + Ejecución</h4>
+            <p class="desc">Acompañamiento integral, de principio a fin.</p>
+          </div>
+          <div class="valor">Cotización personalizada</div>
+        </div>
+      </div>
+      <p class="nota-precios">El valor definitivo dependerá de la complejidad del programa, la cantidad de antecedentes requeridos y el nivel de acompañamiento solicitado.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="contenedor">
+      <span class="eyebrow">Preguntas frecuentes</span>
+      <h2 class="titulo-seccion">Resolvamos tus dudas</h2>
+
+      <div class="faq-lista">
+        <details>
+          <summary>¿Se garantiza la adjudicación del proyecto? <span class="signo">+</span></summary>
+          <p>No. Ningún consultor serio puede garantizar un resultado, ya que la adjudicación depende de la evaluación de la institución convocante. Una formulación estratégica mejora la calidad, coherencia y competitividad de la postulación, pero no asegura el resultado final.</p>
+        </details>
+        <details>
+          <summary>¿Qué programas puedo postular? <span class="signo">+</span></summary>
+          <p>Se trabaja con CORFO, SERCOTEC, fondos regionales y otros programas de fomento productivo. El apoyo dependerá de que el emprendimiento cumpla los requisitos establecidos en las bases de cada convocatoria.</p>
+        </details>
+        <details>
+          <summary>¿Puedo contratar solo la formulación? <span class="signo">+</span></summary>
+          <p>Sí. El acompañamiento a la ejecución es un servicio independiente y opcional, que puede contratarse por separado en caso de ser adjudicado.</p>
+        </details>
+        <details>
+          <summary>¿Qué ocurre si mi proyecto es adjudicado? <span class="signo">+</span></summary>
+          <p>Comienza una etapa de ejecución administrativa, con plazos, rendiciones y requisitos propios de cada programa. En esta fase también es posible recibir acompañamiento profesional.</p>
+        </details>
+        <details>
+          <summary>¿Cómo se desarrolla el servicio? <span class="signo">+</span></summary>
+          <p>De manera presencial o remota, según lo que resulte más conveniente. El trabajo se sostiene mediante reuniones virtuales y comunicación continua durante todo el proceso.</p>
+        </details>
+        <details>
+          <summary>¿Qué necesito para comenzar? <span class="signo">+</span></summary>
+          <p>Las bases de la convocatoria, antecedentes básicos del negocio y una primera reunión para comprender los objetivos y el estado actual del proyecto.</p>
+        </details>
+        <details>
+          <summary>¿Por qué contratar una consultoría si el formulario puede completarse de manera independiente? <span class="signo">+</span></summary>
+          <p>El valor de este servicio no está en completar un formulario, sino en analizar las bases, estructurar una propuesta coherente, redactar estratégicamente, alinear el proyecto con los criterios de evaluación y acompañar al emprendedor durante todo el proceso.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-final">
+    <div class="contenedor">
+      <h2>Conversemos sobre tu próximo proyecto.</h2>
+      <p>Cada convocatoria representa una oportunidad distinta. Una buena preparación puede marcar una diferencia significativa en la calidad de una postulación. Si buscas un acompañamiento estratégico, profesional y personalizado, estaré encantada de conocer tu proyecto y ayudarte a estructurarlo.</p>
+      <a class="boton boton-primario" href="https://wa.me/56920446659?text=Hola%20Loreto%2C%20quisiera%20agendar%20una%20reuni%C3%B3n%20para%20conversar%20sobre%20mi%20proyecto." target="_blank" rel="noopener">Agendar una reunión</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="contenedor">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#inicio">Loreto Díaz <span>Sarria</span></a>
+        <p>Consultora en Formulación Estratégica de Proyectos</p>
+      </div>
+      <div class="footer-contacto">
+        <a href="https://wa.me/56920446659" target="_blank" rel="noopener">WhatsApp +56 9 2044 6659</a>
+        <a href="mailto:loretosarriaa@gmail.com">loretosarriaa@gmail.com</a>
+      </div>
+    </div>
+
+    <p class="footer-legal">La evaluación y adjudicación de los proyectos depende exclusivamente de la institución convocante y de sus respectivos procesos de evaluación. Ningún resultado puede ser garantizado por este servicio de consultoría.</p>
+    <p class="footer-copy">© 2026 Loreto Díaz Sarria. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+</body>
+</html>
